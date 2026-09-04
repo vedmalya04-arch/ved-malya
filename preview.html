@@ -1,3 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Profile Preview - Ved Prashant Malya</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown-dark.min.css">
+  <style>
+    body {
+      background-color: #0d1117;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+    }
+    .container {
+      max-width: 890px;
+      width: 100%;
+    }
+    .header-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #8b949e;
+      font-size: 13px;
+      padding: 10px 16px;
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-bottom: none;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+    .markdown-body {
+      box-sizing: border-box;
+      padding: 40px 48px;
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header-bar">
+      <span>📖 <strong>vedmalya04-arch</strong> / README.md</span>
+      <span>👁️ GitHub Preview Mode</span>
+    </div>
+    <div id="content" class="markdown-body"></div>
+  </div>
+
+  <script id="raw-markdown" type="text/markdown">
 <h1 align="center">
   Hi, I'm Ved Prashant Malya 👋
 </h1>
@@ -83,3 +137,11 @@ My passion lies at the intersection of quantitative finance, software architectu
 ### 💡 A Little About My Mindset
 
 > *"Ambitious, competitive, and relentlessly growth-driven — I’d rather go big, learn fast, and build something meaningful than settle for average."*
+  </script>
+
+  <script>
+    const markdownText = document.getElementById('raw-markdown').textContent;
+    document.getElementById('content').innerHTML = marked.parse(markdownText);
+  </script>
+</body>
+</html>
